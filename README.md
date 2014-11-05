@@ -28,6 +28,14 @@ var include = require('connect-include');
 connect().use(include('/my/web/root'));
 ```
 
+To enable debugmode (prints out the file path which was included as an html comment), include like this:
+
+```javascript
+connect().use(include('/my/web/root', {
+    debug: true
+}));
+```
+
 Gruntfile.js
 ------------
 If you're using Grunt, include as follows in `Gruntfile.js`:
